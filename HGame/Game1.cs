@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -9,13 +10,52 @@ namespace HGame
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
+        GraphicsDeviceManager _graphics;
         SpriteBatch spriteBatch;
         
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            _graphics = new GraphicsDeviceManager(this);
+            //graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            //graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            const int prefWidth = 1600;
+            const int prefHeight = 900;
+            _graphics.PreferredBackBufferWidth = SysInfo.VWidth < prefWidth ? (int)Math.Round(SysInfo.VWidth * 0.99f) : prefWidth;
+            _graphics.PreferredBackBufferHeight = SysInfo.VHeight < prefHeight ? (int)Math.Round(SysInfo.VHeight * 0.9f) : prefHeight;
+            _graphics.IsFullScreen = false;
+            //_graphics.PreferMultiSampling = true; // causes crash, bug with monogame 3.6, below is temporary fix
+            _graphics.PreparingDeviceSettings += SetMultiSampling;
+            _graphics.PreparingDeviceSettings += SetToPreserve;
+
+            void SetMultiSampling(object sender, PreparingDeviceSettingsEventArgs e)
+            {
+                var pp = e.GraphicsDeviceInformation.PresentationParameters;
+                pp.MultiSampleCount = 4;
+            }
+
+            void SetToPreserve(object sender, PreparingDeviceSettingsEventArgs eventargs)
+            {
+                eventargs.GraphicsDeviceInformation.PresentationParameters.RenderTargetUsage = RenderTargetUsage.PreserveContents;
+            }
+
             Content.RootDirectory = "Content";
+
+            IsMouseVisible = true;
+
+            Window.IsBorderless = true;
+
+            AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+
+            void OnProcessExit(object sender, EventArgs e)
+            {
+                //
+            }
+
+            // Call update before every draw, instead of 60 times per second.
+            IsFixedTimeStep = false;
+
+            //this.IsFixedTimeStep = true;
+            //this.TargetElapsedTime = new System.TimeSpan(0, 0, 0, 0, 100);
         }
 
         /// <summary>
