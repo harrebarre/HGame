@@ -43,7 +43,7 @@ namespace HGame
                 eventargs.GraphicsDeviceInformation.PresentationParameters.RenderTargetUsage = RenderTargetUsage.PreserveContents;
             }
 
-            Content.RootDirectory = "Content";
+            Content.RootDirectory = "HContent";
 
             IsMouseVisible = true;
 
