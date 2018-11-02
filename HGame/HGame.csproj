@@ -54,6 +54,7 @@
     <Compile Include="Colors\Systems\ColorSystem.cs" />
     <Compile Include="Colors\Systems\GradientColorSystem.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="HKeyboard.cs" />
     <Compile Include="HMath\Funct.cs" />
     <Compile Include="HMath\Geometrics.cs" />
     <Compile Include="HMath\H.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="HMath\MathObjects\CubicBezier.cs" />
     <Compile Include="HMath\Textorials.cs" />
     <Compile Include="HMath\Vectorials.cs" />
+    <Compile Include="HMouse.cs" />
     <Compile Include="LayerDepths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
