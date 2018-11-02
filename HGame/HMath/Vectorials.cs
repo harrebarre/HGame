@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HGame.HMath.MathObjects;
+using HGame.HWaypoints;
 using Microsoft.Xna.Framework;
 
 namespace HGame.HMath

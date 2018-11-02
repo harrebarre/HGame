@@ -73,6 +73,8 @@
     <Compile Include="HShapes\Quad.cs" />
     <Compile Include="HShapes\Shape.cs" />
     <Compile Include="HShapes\Triangle.cs" />
+    <Compile Include="HWaypoints\WayPoint.cs" />
+    <Compile Include="HWaypoints\WaypointHolder.cs" />
     <Compile Include="LayerDepths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
