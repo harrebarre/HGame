@@ -42,6 +42,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Colors\HColor.cs" />
+    <Compile Include="Colors\ColorHelper.cs" />
+    <Compile Include="Colors\Gradients\AntlerReishi.cs" />
+    <Compile Include="Colors\Gradients\Gradient.cs" />
+    <Compile Include="Colors\HSL.cs" />
+    <Compile Include="Colors\HSV.cs" />
+    <Compile Include="Colors\Kolor.cs" />
+    <Compile Include="Colors\Overlays\ChannelFilter.cs" />
+    <Compile Include="Colors\Overlays\Overlay.cs" />
+    <Compile Include="Colors\Systems\ColorSystem.cs" />
+    <Compile Include="Colors\Systems\GradientColorSystem.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="HMath\Funct.cs" />
     <Compile Include="HMath\Geometrics.cs" />
