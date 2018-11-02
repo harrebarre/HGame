@@ -57,6 +57,8 @@
     <Compile Include="HColors\Systems\GradientColorSystem.cs" />
     <Compile Include="HDrawing\HShapeExtensions.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="HInterfaces\ICorporeal.cs" />
+    <Compile Include="HInterfaces\ISpatial.cs" />
     <Compile Include="HKeyboard.cs" />
     <Compile Include="HMath\Funct.cs" />
     <Compile Include="HMath\Geometrics.cs" />
