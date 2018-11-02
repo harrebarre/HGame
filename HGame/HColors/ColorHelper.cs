@@ -1,4 +1,5 @@
 ﻿using System;
+using HGame.HMath;
 using Microsoft.Xna.Framework;
 
 namespace HGame.Colors

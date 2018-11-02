@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using HGame.HMath;
+using Microsoft.Xna.Framework;
 
 namespace HGame.Colors.Gradients
 {
